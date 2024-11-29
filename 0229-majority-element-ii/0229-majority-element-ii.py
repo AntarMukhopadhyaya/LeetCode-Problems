@@ -5,6 +5,7 @@ class Solution:
        
         count1 = count2 = 0
         ele1 = ele2 = -math.inf
+        # applying the extended Boyer Moore's voting algo
         for i in range(n):
             if count1 == 0 and nums[i] != ele2:
                 count1 = 1
@@ -20,6 +21,7 @@ class Solution:
                 count1  -= 1
                 count2 -= 1
         count1 = count2 = 0
+        #Manually check if the sotred elements are majority elements or not
         for i in range(n):
             if nums[i] == ele1:
                 count1 += 1
